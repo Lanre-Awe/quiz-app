@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+.titleContainer {
+  width: 100%;
+  padding: 0.5% 0;
+  background: linear-gradient(to right, white, rgba(0, 0, 248, 0.183));
+}
+.titleHeader {
+  margin-left: 44%;
+  margin-bottom: 2%;
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(blue, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.side {
+  width: 70%;
+  z-index: 100;
+  height: 100vh;
+  position: absolute;
+  background-color: white;
+  transition: all 1s ease;
+  background-color: rgb(198, 198, 247);
+}
+.icons {
+  fill: black;
+  width: 25px;
+  height: 25px;
+}
+.close {
+  padding: 0;
+  background: none;
+  border: none;
+  margin-left: 90%;
+  margin-top: 3%;
+}
+.closed {
+  transform: translateX(-120%);
+}
+
+.burgerContainer {
+  display: none;
+  margin-right: 40%;
+  margin-left: 2%;
+}
+.burgerContainer div {
+  width: 20px;
+  height: 3px;
+  background-color: blue;
+  margin-top: 3px;
+}
+.frontpage aside {
+  display: inline-block;
+  width: 23%;
+  height: 89vh;
+  vertical-align: top;
+  border-top: 1px solid rgba(0, 0, 255, 0.322);
+  border-bottom: 1px solid rgba(0, 0, 255, 0.32);
+  background-color: rgba(0, 0, 248, 0.183);
+}
+.frontpage main {
+  padding: 0 3%;
+  display: inline-block;
+  width: 77%;
+  height: 89vh;
+  border: 1px solid rgba(0, 0, 255, 0.326);
+  overflow: auto;
+  /* background-color: #e6e3e3; */
+  background-color: white;
+}
+
+.frontpage footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to right, white, rgba(0, 0, 248, 0.183));
+}
+
+.homeContainer {
+  margin-top: 20%;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+.formContainer {
+  text-align: center;
+}
+.formContainer form > label {
+  margin-right: 1%;
+  font-size: large;
+}
+
+.formContainer form > select {
+  outline: none;
+  padding: 5px;
+  width: 20%;
+  border: 2px solid black;
+}
+.formContainer form > a > button {
+  display: block;
+  margin: 3% auto 0 auto;
+  padding: 1% 3.5%;
+  background-color: blue;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+.categories {
+  padding: 4%;
+}
+.categories ul {
+  list-style: none;
+  border-radius: 3px;
+  height: 370px;
+  overflow: auto;
+  padding: 0 2%;
+}
+
+.active {
+  color: rgb(0, 0, 255);
+}
+.categories h3 {
+  font-variant: small-caps;
+}
+.error {
+  margin-top: 25%;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .titleHeader {
+    font-size: 25px;
+    margin: 3px 30% 0 0;
+    display: block;
+  }
+  .titleContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .burgerContainer {
+    display: block;
+    margin-right: 20%;
+  }
+  .frontpage aside {
+    display: none;
+  }
+  .frontpage main {
+    width: 100%;
+  }
+  .categories > ul {
+    height: 80vh;
+    overflow: auto;
+    border: none;
+    overflow: auto;
+    background-color: rgb(198, 198, 247);
+  }
+  .categories > ul > li {
+    padding: 3% 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.404);
+  }
+  .frontpage main {
+    height: 93vh;
+  }
+  .homeContainer {
+    margin-top: 40%;
+  }
+  .formContainer form > select {
+    display: block;
+    width: 50%;
+    margin: 5% auto 15% auto;
+  }
+  .title {
+    margin-bottom: 30%;
+  }
+  .formContainer form > a > button {
+    padding: 3% 5%;
+  }
+}

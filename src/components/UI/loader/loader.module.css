@@ -1,0 +1,79 @@
+.loaderContainer {
+  height: 40px;
+  width: 70px;
+  margin: 20% auto;
+}
+
+.box1 {
+  height: 18px;
+  width: 18px;
+  background-color: blue;
+  margin: 0 3%;
+  opacity: 0;
+  display: inline-flex;
+  animation: loading 3.5s ease infinite;
+}
+.box2 {
+  height: 18px;
+  width: 18px;
+  background-color: blue;
+  margin: 0 3%;
+  display: inline-flex;
+  opacity: 0;
+  animation: loading 3.5s ease 0.3s infinite;
+}
+.box3 {
+  height: 18px;
+  width: 18px;
+  background-color: blue;
+  margin: 0 3%;
+  opacity: 0;
+  display: inline-flex;
+  animation: loading 3.5s ease 0.6s infinite;
+
+  /* animation: loading 2.5s ease; */
+}
+.box4 {
+  height: 18px;
+  width: 18px;
+  background-color: blue;
+  opacity: 0;
+  margin: 0 3%;
+  display: inline-flex;
+  animation: loading 3.5s ease 0.9s infinite;
+}
+.box5 {
+  height: 18px;
+  width: 18px;
+  background-color: blue;
+  opacity: 0;
+  margin: 0 3%;
+  display: inline-flex;
+  animation: loading 3.5s ease 1.2s infinite;
+}
+.box6 {
+  height: 18px;
+  opacity: 0;
+  width: 18px;
+  background-color: blue;
+  margin: 0 3%;
+  display: inline-flex;
+  animation: loading 3.5s ease 1.5s infinite;
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .loaderContainer {
+    margin: 90% auto;
+  }
+}

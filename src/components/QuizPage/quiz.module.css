@@ -1,0 +1,124 @@
+.question {
+  background-color: rgba(0, 0, 248, 0.183);
+  padding: 4% 1%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.answers {
+  margin-top: 1%;
+}
+
+.option {
+  border: 2px solid rgba(0, 0, 248, 0.183);
+  margin-top: 2%;
+  padding: 1.5% 1%;
+  border-radius: 6px;
+  width: 35%;
+  cursor: pointer;
+}
+.option:nth-child(1) {
+  margin-top: 0;
+}
+.selected {
+  border-color: blue;
+  cursor: pointer;
+  color: blue;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1%;
+}
+.heading div {
+  width: 5%;
+}
+.next {
+  display: flex;
+  justify-content: flex-end;
+}
+.next button {
+  padding: 0.8% 3%;
+  background-color: blue;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.next button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(128, 128, 128, 0.539);
+}
+.progress {
+  width: 30%;
+  margin: 0 auto;
+}
+.congrat,
+.complete {
+  text-align: center;
+}
+
+.complete {
+  margin-bottom: 2%;
+}
+.buttonContainer {
+  text-align: center;
+  margin-top: 3%;
+}
+.completedCover button {
+  background-color: blue;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 1% 2%;
+  cursor: pointer;
+}
+.corrections {
+  background-color: rgba(0, 0, 255, 0.075);
+  padding: 0 2%;
+  border-radius: 5px;
+}
+.correctAnswer i {
+  color: rgb(1, 1, 181);
+}
+.history h3 {
+  padding: 0 0 0.4% 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    margin-bottom: 20%;
+    margin-top: 3%;
+  }
+  .question {
+    height: 100px;
+  }
+  .heading div {
+    width: 15%;
+  }
+  .answers {
+    margin-top: 30%;
+    margin-bottom: 20%;
+  }
+  .option {
+    width: 100%;
+    padding: 3% 1%;
+  }
+  .next button {
+    padding: 3% 5%;
+  }
+  .progress {
+    margin: 10% auto;
+  }
+  .completedCover button {
+    padding: 2% 5%;
+    margin-bottom: 10%;
+  }
+  .completedCover {
+    margin-top: 10%;
+  }
+}

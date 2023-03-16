@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { Redirect, Route, Switch } from "react-router-dom";
+import Category from "./components/CategoryPage/Category";
+import Footer from "./components/frontPage/Footer";
+import Header from "./components/frontPage/Header";
+import HomePage from "./components/frontPage/HomePage";
+import classes from "./components/frontPage/frontpage.module.css";
+import SideMenu from "./components/frontPage/SideMenu";
+import QuizPage from "./components/QuizPage/QuizPage";
+import QuizCompleted from "./components/QuizPage/QuizCompleted";
+import { useSelector } from "react-redux";
+import NotFound from "./components/UI/NotFound";
 
 function App() {
+  const completed = useSelector((state) => state.quiz.completed);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={classes.frontpage}>
+      <header>
+        <Header />
       </header>
+      <aside>
+        <SideMenu />
+      </aside>
+      <main>
+        <Switch>
+          <Route path="/home" exact>
+            <HomePage />
+          </Route>
+          <Route path="/" exact>
+            <Redirect to="/home" />
+          </Route>
+          <Route path="/categories/:category" exact>
+            <Category />
+          </Route>
+          <Route path="/categories/:category/quiz">
+            <QuizPage />
+          </Route>
+          <Route path="/categories/:category/quiz-completed">
+            {completed ? <QuizCompleted /> : <NotFound />}
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
